@@ -1,0 +1,18 @@
+footer {
+    border-top: .1rem solid var(--amarelo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 3rem 0 2rem 0;
+}
+
+footer span {
+    font-weight: bold;
+    color: var(--amarelo);
+    padding-bottom: 2rem;
+}
