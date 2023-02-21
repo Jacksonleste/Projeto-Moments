@@ -1,1 +1,15 @@
-<p>moment-form works!</p>
+<form>
+    <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" placeholder="Insira um título" name="title" id="title" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Descrição:</label>
+        <textarea type="text" placeholder="Insira uma descrição" name="description" id="description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image">Imagem do seu momento:</label>
+        <input type="file" id="image" name="image">
+    </div>
+    <button>{{ btnText }}</button>
+</form>
