@@ -1,0 +1,9 @@
+div {
+    margin-top: .5rem;
+}
+
+.error-validation {
+    color: red;
+    border-left: .3rem solid red;
+    padding-left: .3rem;
+}

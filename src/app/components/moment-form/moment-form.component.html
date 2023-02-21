@@ -1,15 +1,18 @@
-<form>
+<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
     <div class="form-group">
         <label for="title">Título:</label>
-        <input type="text" placeholder="Insira um título" name="title" id="title" required>
+        <input type="text" formControlName="title" placeholder="Insira um título" name="title" id="title" required>
+        <app-error-field nomeCampo="título" [campo]="title" [formDir]="formDir"></app-error-field>
     </div>
     <div class="form-group">
         <label for="description">Descrição:</label>
-        <textarea type="text" placeholder="Insira uma descrição" name="description" id="description" required></textarea>
+        <textarea type="text" formControlName="description" placeholder="Insira uma descrição" name="description" id="description" required></textarea>
+        <app-error-field nomeCampo="descrição" [campo]="description" [formDir]="formDir"></app-error-field>
     </div>
     <div class="form-group">
         <label for="image">Imagem do seu momento:</label>
         <input type="file" id="image" name="image">
+        <!-- <app-error-field nomeCampo="imagem" [campo]="imagem" [formDir]="formDir"></app-error-field> -->
     </div>
-    <button>{{ btnText }}</button>
+    <button type="submit">{{ btnText }}</button>
 </form>
