@@ -12,6 +12,9 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
 import { MomentFormComponent } from './components/moment-form/moment-form.component';
 import { ErrorFieldComponent } from './components/error-field/error-field.component';
+import { MessagesComponent } from './components/messages/messages.component';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +25,16 @@ import { ErrorFieldComponent } from './components/error-field/error-field.compon
     HomeComponent,
     NewMomentComponent,
     MomentFormComponent,
-    ErrorFieldComponent
+    ErrorFieldComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
