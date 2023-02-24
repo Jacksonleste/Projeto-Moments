@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms'
 import { Moment } from 'src/app/Moment';
 
 @Component({
@@ -12,18 +12,18 @@ export class MomentFormComponent implements OnInit {
   @Output() onSubmit = new EventEmitter<Moment>();
   @Input() btnText!:string;
 
-  momentForm!: FormGroup;
+  momentForm!: UntypedFormGroup;
 
   imagem:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.momentForm = new FormGroup({
-      id: new FormControl('', []),
-      title: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
-      image: new FormControl('', [])
+    this.momentForm = new UntypedFormGroup({
+      id: new UntypedFormControl('', []),
+      title: new UntypedFormControl('', [Validators.required]),
+      description: new UntypedFormControl('', [Validators.required]),
+      image: new UntypedFormControl('', [])
     });
   }
 
