@@ -6,7 +6,10 @@
     --vermelho: #D95032;
 }
 
-html { font-size: 62.5%; }
+html { 
+    font-size: 62.5%; 
+    color: #444;
+}
 
 * {
     color: var(--red);
@@ -14,7 +17,6 @@ html { font-size: 62.5%; }
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-sizing: border-box;
-    color: #444;
     text-decoration: none;
     font-size: 1.6rem;
 }

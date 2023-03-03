@@ -6,12 +6,12 @@
     </div>
     <div class="form-group">
         <label for="description">Descrição:</label>
-        <textarea type="text" formControlName="description" placeholder="Insira uma descrição" name="description" id="description" required></textarea>
+        <textarea rows="5" type="text" formControlName="description" placeholder="Insira uma descrição" name="description" id="description" required></textarea>
         <app-error-field nomeCampo="descrição" [campo]="description" [formDir]="formDir"></app-error-field>
     </div>
     <div class="form-group">
         <label for="image">Imagem do seu momento:</label>
-        <input type="file" id="image" name="image" (change)="(onFileSelected($event))"/>
+        <input type="file" accept="image/*" id="image" name="image" (change)="(onFileSelected($event))"/>
         <!-- <app-error-field nomeCampo="imagem" [campo]="imagem" [formDir]="formDir"></app-error-field> -->
         <img [src]="imagem" alt="">
     </div>
