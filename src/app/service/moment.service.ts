@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class MomentService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}/moments`
+  private apiUrl = `${this.baseApiUrl}api/moments`
 
   constructor(private http: HttpClient) { }
 
