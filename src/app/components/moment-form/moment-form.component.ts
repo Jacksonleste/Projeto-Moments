@@ -50,7 +50,6 @@ export class MomentFormComponent implements OnInit {
       return;
     }
     console.log(this.momentForm.value);
-    console.log(this.imagem);
 
     this.onSubmit.emit(this.momentForm.value);
   }

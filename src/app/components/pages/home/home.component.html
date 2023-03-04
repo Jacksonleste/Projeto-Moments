@@ -1,1 +1,17 @@
-<p> página Home</p>
+<div class="home-conyainer">
+    <h1>Veja os melhores momentos Compartilhados!</h1>
+
+    <div *ngIf="momentList.length > 0; else noMoments">
+        <div *ngFor="let moment of momentList" class="moments">
+            <p class="moment-title">{{moment.title}}</p>
+            <img
+            src="{{ baseApiUrl }}'/upload/'{{ moment.image }}"
+            [alt]="moment.title"
+            />
+        </div>
+    </div>
+    
+    <ng-template #noMoments>
+        <h1>Não Há Momentos cadastrados!</h1>
+    </ng-template>
+</div>
