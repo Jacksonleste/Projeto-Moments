@@ -26,4 +26,8 @@ export class MomentService {
   getMoment(id:number){
   return this.http.get<Response<Moment>>(`${this.apiUrl}/${id}`)
   }
+
+  delete(id:number){
+    return this.http.delete<Response<Moment>>(`${this.apiUrl}/${id}`)
+  }
 }
