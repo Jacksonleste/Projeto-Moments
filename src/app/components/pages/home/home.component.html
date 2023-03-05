@@ -1,5 +1,11 @@
 <div class="home-container">
     <h1>Veja os melhores momentos Compartilhados!</h1>
+    <div class="search-container">
+        <form action="">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Ou busque por um moment..." (input)="search($event)">
+        </form>
+    </div>
 
     <div *ngIf="momentList.length > 0; else noMoments" class="moments-container">
         <div *ngFor="let moment of momentList" class="moments">

@@ -13,7 +13,9 @@ import { environment } from 'src/environments/environment';
 export class HomeComponent implements OnInit {
 
   momentList: Moment[] = [];
-  momentsSearch: Moment[] = [];
+
+  allMoments: Moment[] = [];
+  searchTerm:string = ""
 
   baseApiUrl = environment.baseApiUrl;
 
@@ -38,9 +40,18 @@ export class HomeComponent implements OnInit {
       });
 
       this.momentList = data;
-      this.momentsSearch = data;
+      this.allMoments = data;
 
       console.log(this.momentList)
+    })
+  }
+
+  search(e:Event){
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.momentList = this.allMoments.filter(moment => {
+      return moment.title.toLocaleLowerCase().includes(value);
     })
   }
 
