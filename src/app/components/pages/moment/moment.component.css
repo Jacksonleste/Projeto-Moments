@@ -1,0 +1,75 @@
+.moment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 0 auto 1em;
+}
+
+.moment img {
+    max-width: 500px;
+    margin-bottom: 0 auto 1em;
+}
+
+.about-moment, 
+.action {
+    padding-bottom: 2rem;
+    border-bottom: .1rem solid;
+    padding: 2.4rem;
+    width: 100%;
+}
+
+.action { 
+    background-color: #eee;
+}
+
+.comments {
+    margin-bottom: 2rem;
+    padding: 3rem;
+}
+
+.edit-btn,
+.delete-btn {
+    border: .1rem solid #EFEFEF;
+    padding: .8rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: #FFF;
+}
+
+.edit-btn,
+.edit-btn svg {
+    border-color: #007BFF;
+    color: #007BFF;
+}
+
+.edit-btn:hover,
+.edit-btn:hover svg {
+    color: #fff;
+    background-color: #007BFF;
+}
+
+
+.delete-btn,
+.delete-btn svg {
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+}
+
+.delete-btn:hover,
+.delete-btn:hover svg {
+    color: #fff;
+    background-color: var(--vermelho);
+}
+
+.about-moment h2,
+.action h2, 
+.comments h2 {
+    margin-bottom: 2rem;
+}

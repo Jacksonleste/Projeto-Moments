@@ -53,7 +53,6 @@ button {
     padding: 1rem 2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: .4s;
 }
 
 button:hover {
