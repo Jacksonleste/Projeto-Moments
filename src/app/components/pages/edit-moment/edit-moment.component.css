@@ -1,0 +1,10 @@
+h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.6rem;
+}
+
+h2 span {
+    color: var(--amarelo);
+    font-size: 2.6rem;
+}

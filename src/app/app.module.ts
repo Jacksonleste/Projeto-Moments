@@ -14,6 +14,7 @@ import { MomentFormComponent } from './components/moment-form/moment-form.compon
 import { ErrorFieldComponent } from './components/error-field/error-field.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { MomentComponent } from './components/pages/moment/moment.component';
+import { EditMomentComponent } from './components/pages/edit-moment/edit-moment.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -28,7 +29,8 @@ import { MomentComponent } from './components/pages/moment/moment.component';
     MomentFormComponent,
     ErrorFieldComponent,
     MessagesComponent,
-    MomentComponent
+    MomentComponent,
+    EditMomentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Moment } from 'src/app/Moment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-moment-form',
@@ -11,20 +12,24 @@ export class MomentFormComponent implements OnInit {
 
   @Output() onSubmit = new EventEmitter<Moment>();
   @Input() btnText!:string;
+  @Input() momentData: Moment | null = null;
 
-  momentForm!: UntypedFormGroup;
+  momentForm!: FormGroup;
+  baseApiUrl:string = environment.baseApiUrl;
 
   imagem:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.momentForm = new UntypedFormGroup({
-      id: new UntypedFormControl('', []),
-      title: new UntypedFormControl('', [Validators.required]),
-      description: new UntypedFormControl('', [Validators.required]),
-      image: new UntypedFormControl('', [])
+    this.momentForm = new FormGroup({
+      id: new FormControl(this.momentData ? this.momentData.id: '', []),
+      title: new FormControl(this.momentData ? this.momentData.title: '', [Validators.required]),
+      description: new FormControl(this.momentData ? this.momentData.description: '', [Validators.required]),
+      image: new FormControl('', [])
     });
+
+    if (this.momentData) this.imagem = `${this.baseApiUrl}uploads/${this.momentData.image}`
   }
 
   get title(){
@@ -49,7 +54,6 @@ export class MomentFormComponent implements OnInit {
     if(this.momentForm.invalid){
       return;
     }
-    console.log(this.momentForm.value);
 
     this.onSubmit.emit(this.momentForm.value);
   }
