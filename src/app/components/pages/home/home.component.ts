@@ -25,8 +25,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMoments();
-    console.log(this.baseApiUrl)
-
   }
 
   loadMoments() {
@@ -41,8 +39,6 @@ export class HomeComponent implements OnInit {
 
       this.momentList = data;
       this.allMoments = data;
-
-      console.log(this.momentList)
     })
   }
 
