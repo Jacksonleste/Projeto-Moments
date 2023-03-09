@@ -16,6 +16,32 @@
         </button>
     </div>
     <div class="comments">
-        <p> Comentários ({{moment.comments.length}})</p>
+        <p> Comentários ({{moment.comments!.length}})</p>
+        <div class="comment-form">
+            <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+                <div>
+                    <label for="username">Comentário: </label>
+                    <textarea name="" id="" rows="3" placeholder="Escreva um comentário..." formControlName="comment" required></textarea>
+                    <app-error-field nomeCampo="commento" [campo]="comment" [formDir]="formDir"></app-error-field>
+                </div>
+                <div>
+                    <label for="username">Nome: </label>
+                    <input formControlName="username" type="comment" placeholder="Digite seu nome">
+                    <app-error-field nomeCampo="Nome" [campo]="username" [formDir]="formDir"></app-error-field>
+                </div>
+                <button type="submit">Comentar</button>
+            </form>
+        </div>
+
+        <div *ngIf="moment.comments?.length; else noComments">
+            <div class="comment-container" *ngFor="let comment of moment.comments">
+                <p class="author">{{comment.username}}</p>
+                <p class="comment">{{comment.comment}}</p>
+            </div>
+        </div>
+
+        <ng-template #noComments>
+            <p>Não há comentários</p>
+        </ng-template>
     </div>
 </div>

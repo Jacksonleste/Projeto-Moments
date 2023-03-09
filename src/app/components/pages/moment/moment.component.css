@@ -10,6 +10,8 @@
 
 h1 {
     margin-bottom: 0 auto 1em;
+    font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .moment img {
@@ -72,4 +74,61 @@ h1 {
 .action h2, 
 .comments h2 {
     margin-bottom: 2rem;
+}
+
+.comments {
+    width: 100%;
+}
+
+.comment-container {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: .2rem solid #EFEFEF;
+    width: 100%;
+}
+
+.author {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    font-size: 1.6rem;
+}
+
+.comment {
+    padding-left: .5rem;
+    font-size: 2rem;
+}
+
+.comment-form {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .2rem solid #EFEFEF;
+    padding-bottom: 1rem;
+
+}
+
+.comment-form form {
+    margin-top: 2rem;
+    max-width: 300px;
+    text-align: center;
+
+}
+
+.comment-form form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 1rem .5rem;
+}
+
+form label {
+    padding-bottom: .5rem;
 }
