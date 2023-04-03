@@ -1,9 +1,11 @@
 a {
+    color: #444;
     transition: .4s;
+    font-size: 1.7rem;
 }
 
 a:hover {
-    color: var(--amarelo);
+    color: #fff;
 }
 
 nav {
@@ -11,6 +13,7 @@ nav {
     justify-content: space-between;
     padding: 1.6rem;
     border-bottom: .1rem solid #444;
+    background-color: var(--cor1);
 }
 
 .brand,
@@ -26,11 +29,13 @@ nav {
 }
 
 .brand h2 {
+    font-size: 2rem;
     transition: .4s;
 }
 
 .brand h2:hover {
-    color: var(--amarelo);
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.397) .1rem .1rem .5rem;
 }
 
 .links li{
@@ -44,10 +49,11 @@ nav {
 }
 
 #add a{
-    color: var(--amarelo);
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.397) .1rem .1rem .5rem;
     transition: .4s;
 }
 
 #add a:hover {
-    background-color: rgb(250, 239, 225);
+    background-color: #444;
 }

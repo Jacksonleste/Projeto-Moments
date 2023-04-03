@@ -1,9 +1,9 @@
 :root {
-    --verde: #B1BF9B;
-    --azul: #D8F2E6;
-    --amarelo: #F2B84B;
-    --marrom: #401B05;
-    --vermelho: #D95032;
+    --cor1: #9BD1F2;
+    --cor2: #8DBF5A;
+    --cor3: #7BA651;
+    --cor4: #F29966;
+    --cor5: #D95032;
 }
 
 html { 
@@ -15,7 +15,7 @@ html {
     color: var(--red);
     padding: 0;
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     font-size: 1.6rem;
@@ -48,7 +48,7 @@ form {
 }
 
 button {
-    background-color: var(--azul);
+    background-color: var(--cor2);
     border: .2rem solid transparent;
     padding: 1rem 2rem;
     font-weight: bold;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    color: var(--amarelo);
-    border-color: var(--amarelo);
+    color: var(--cor3);
+    border-color: var(--cor3);
     background-color: white;
 }

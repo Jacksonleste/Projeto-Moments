@@ -16,6 +16,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { MomentComponent } from './components/pages/moment/moment.component';
 import { EditMomentComponent } from './components/pages/edit-moment/edit-moment.component';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { EditMomentComponent } from './components/pages/edit-moment/edit-moment.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    
     // FontAwesomeModule
   ],
   providers: [],

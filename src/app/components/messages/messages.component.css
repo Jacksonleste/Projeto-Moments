@@ -6,7 +6,7 @@
     left: -25%;
     z-index: 10;
     background-color: #fff;
-    border: 3px solid var(--amarelo);
+    border: 3px solid var(--cor3);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
 .clear {
     padding: .5rem;
     cursor: pointer;
-    background-color: var(--vermelho);
+    background-color: var(--cor5);
     color: white;
 }
 

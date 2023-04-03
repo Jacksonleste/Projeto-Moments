@@ -2,7 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Moment } from 'src/app/Moment';
 import { environment } from 'src/environments/environment';
-
+/* TESTE */
 @Component({
   selector: 'app-moment-form',
   templateUrl: './moment-form.component.html',
@@ -43,10 +43,17 @@ export class MomentFormComponent implements OnInit {
   onFileSelected(event:any){
     const file: File = event.target.files[0]
 
+    if(!file){
+      this.imagem = "";
+      return
+    }
+
     this.momentForm.patchValue({image: file})
 
     const reader = new FileReader();
-    reader.onload = () => this.imagem = reader.result;
+    reader.onload = () => {
+      this.imagem = reader.result
+    }
     reader.readAsDataURL(file);
   }
 

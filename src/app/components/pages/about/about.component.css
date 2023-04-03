@@ -18,17 +18,17 @@ h2, p {
 }
 
 .about a {
-    background-color: var(--azul);
-    color: var(--marrom);
+    background-color: var(--cor2);
+    color: var(--cor4);
     font-size: 2.2rem;    
     padding: 1rem 2rem;
     border-radius: 1.5rem;
-    border:solid .2rem var(--amarelo);;
+    border:solid .2rem var(--cor3);;
     transition: .4s;
 }
 
 .about a:hover {
     background-color: #fff;
-    color: var(--amarelo);
+    color: var(--cor3);
     transform: scale(1.1);
 }

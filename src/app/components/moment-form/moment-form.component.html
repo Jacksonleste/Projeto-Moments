@@ -14,7 +14,7 @@
         <label for="image">Imagem do seu momento:</label>
         <input type="file" accept="image/*" id="image" name="image" (change)="(onFileSelected($event))"/>
         <!-- <app-error-field nomeCampo="imagem" [campo]="imagem" [formDir]="formDir"></app-error-field> -->
-        <img [src]="imagem" alt="">
+        <img id="image-preview" *ngIf="imagem" [src]="imagem" alt="image">
     </div>
     <button type="submit">{{ btnText }}</button>
 </form>

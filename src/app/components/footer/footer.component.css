@@ -1,5 +1,5 @@
 footer {
-    border-top: .1rem solid var(--amarelo);
+    border-top: .1rem solid var(--cor3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +13,6 @@ footer p {
 
 footer span {
     font-weight: bold;
-    color: var(--amarelo);
+    color: var(--cor3);
     padding-bottom: 2rem;
 }

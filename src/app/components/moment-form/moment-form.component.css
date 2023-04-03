@@ -1,4 +1,44 @@
 i {
     color: black;
-    
+}
+
+input[type="text"], textarea {
+    color: rgb(62, 62, 62);
+    background-color: #e6e6e6;
+    border-radius: .5rem;
+    box-shadow: .2rem .3rem .7rem #00000044;
+}
+
+
+input[type="file"] {
+    border-radius: .5rem;
+    background-color: #e6e6e6;
+    display: flex;
+}
+
+::file-selector-button {
+    background-color: var(--cor1);
+    border: none;
+    box-shadow: .2rem .3rem .7rem #0000004e;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    margin-right: 2rem;
+}
+
+#image-preview {
+    margin: auto;
+    width: fit-content;
+    max-width: 60rem;
+    max-height: 30rem;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+button{
+    border-radius: .5rem;
+    transition: .5s;
+}
+
+button:hover {
+    transform: scale(1.03);
 }

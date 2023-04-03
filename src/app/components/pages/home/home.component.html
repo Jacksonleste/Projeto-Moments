@@ -9,17 +9,18 @@
 
     <div *ngIf="momentList.length > 0; else noMoments" class="moments-container">
         <div *ngFor="let moment of momentList" class="moments">
-            <img
-            src="{{ baseApiUrl }}uploads/{{ moment.image }}"
-            [alt]="moment.title"
-            />
-            <p class="moment-title">{{moment.title}}</p>
-            <p class="created_at">em: {{moment.created_at}}</p>
-            <p class="comments">Comentários: {{moment.comments!.length}}</p>
-            <a class="details" routerLink="moments/{{moment.id}}">
-                Detalhes
-            </a>
-        </div>
+                <a routerLink="moments/{{moment.id}}">
+                    <img
+                    src="{{ baseApiUrl }}uploads/{{ moment.image }}"
+                    [alt]="moment.title"
+                    />
+                    <div>
+                        <p class="moment-title">{{moment.title}}</p>
+                        <p class="created_at">em: {{moment.created_at}}</p>
+                        <p class="comments">Comentários: {{moment.comments!.length}}</p>
+                    </div>
+                </a>
+            </div>
     </div>
     
     <ng-template #noMoments>
